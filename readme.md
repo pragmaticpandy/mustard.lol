@@ -1,11 +1,14 @@
+## Initial set up - Ruby
 Installed ruby with rbenv
 https://github.com/rbenv/rbenv
 
 Installed Ruby 2.5.3
 
-# to use it
+Use it:
 rbenv global 2.5.3
 
-# to build
+## Building
 bundle exec jekyll serve
 
+## Deploying
+Copy contents of generated site folder to S3 bucket and test.
