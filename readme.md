@@ -11,4 +11,10 @@ rbenv global 2.5.3
 bundle exec jekyll serve
 
 ## Deploying
-Copy contents of generated site folder to S3 bucket and test.
+* Delete route 53 alias
+* take S3 static hosting offline
+* Copy contents of generated site folder to S3 bucket
+* put s3 static hosting back online with index.html and 404.html
+* create route 53 alias again
+* test
+
