@@ -5,4 +5,4 @@
 layout: page
 ---
 
-Licensing info for ```/assets/mustard-plastic-bottle-svgrepo-com.svg``` is [here](https://www.svgrepo.com/svg/85357/mustard-plastic-bottle).
+Licensing info for ```/assets/mustard-plastic-bottle-svgrepo-com.svg``` (from which ```favicon.ico``` is derived) is [here](https://www.svgrepo.com/svg/85357/mustard-plastic-bottle).
