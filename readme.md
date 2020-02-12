@@ -1,17 +1,11 @@
-## Initial set up - Ruby
-Installed ruby with rbenv
-https://github.com/rbenv/rbenv
-
-Installed Ruby 2.5.3
-
-Use it:
-rbenv global 2.5.3
-
-## Building
-bundle exec jekyll serve
-
-## Deploying
-* Copy contents of generated site folder to S3 bucket
-* test
-    * things should be fully invalidated after 1 hour.
-
+## Permissions setup
+1. Create user in console
+    * Attach ```assume-mustard-lol-deployer-policy``` and ```mustard-lol-deployment-policy```
+1. Create something like the following in ```~/.aws/config```:
+   ```
+   [profile mustard-lol-deployer]
+   role_arn = arn:aws:iam::900943508744:role/mustard-lol-deployer
+   region = us-west-2
+   source_profile = default
+   ```
+1. Configure the default profile with the user you created.
