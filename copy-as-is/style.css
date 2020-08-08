@@ -1,0 +1,76 @@
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    height: 100%;
+    font-family: sans-serif; /* 1 */
+    font-size: 1em;
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    background-color: black;
+    --fg-color: #a89984;
+    color: var(--fg-color);
+}
+
+body {
+    height: 98%;
+    display: grid;
+    place-items: center;
+    margin: .5em;
+}
+
+a {
+    text-decoration-color: var(--fg-color);
+    color: var(--fg-color);
+}
+
+a.social {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+.fg-svg {
+
+    /*
+     * This gets all the svgs to the right color.
+     * Used https://codepen.io/sosuke/pen/Pjoqqp to convert hex to a filter.
+     */
+    filter: invert(70%) sepia(27%) saturate(244%) hue-rotate(355deg) brightness(84%) contrast(84%);
+}
+
+#content {
+    display: grid;
+    max-width: 60ch;
+    justify-items: stretch;
+}
+
+#profile-pic-div {
+    margin: auto;
+}
+
+#profile-pic {
+    max-width: 150px;
+    border: 1px solid var(--fg-color);
+}
+
+#social-div {
+    margin: auto 0px auto auto;
+}
+
+.social {
+    padding: 8px;
+}
+
+#home-div {
+    margin: auto .5em .5em auto;
+}
+
+#home-image{
+    width:1.5em;
+}

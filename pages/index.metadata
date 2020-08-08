@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+metadata[title]="Paul Anderson"
+metadata[url]="index.html"
+metadata[created]="2020-08-08"
+metadata[updated]="2020-08-09"

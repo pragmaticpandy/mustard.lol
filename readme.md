@@ -9,3 +9,11 @@
    source_profile = default
    ```
 1. Configure the default profile with the user you created.
+
+## Development
+Regular old posts need a `.md` and `.metadata` file in the pages dir with matching prefixes.
+
+Build with `bin/build.zsh`, or `bin/build.zsh --server` to start a continously updating local test
+server.
+
+Deploy with `bin/deploy.zsh`.
