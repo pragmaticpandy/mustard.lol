@@ -3,11 +3,11 @@
 ## paul anderson
 Henlo. You have reached my website. I will post things here occasionally, maybe.
 
-🚲⛰⚽️🏕🥃🍸🍹💻📺
-
-currently a software engineer @ AWS.
+🚲🥃🍸🍹⚽️⛰🏕💻📺
 
 Ohio → Seattle
+
+Currently: software engineer @ AWS.
 
 <div id="social-div">
 <a class="social" href="mailto:paul@mustard.lol">
