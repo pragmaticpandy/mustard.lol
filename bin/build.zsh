@@ -47,7 +47,15 @@ build() (
 
     printf "\n\n" >> "$index_md"
     while IFS='' read -r line || [ -n "${line}" ]; do
-        printf "${line}\n\n" >> "$index_md"
+        if [[ ! -z "${line}" ]] ; then
+            printf "%s—%s\n\n" \
+                "$(date -d \
+                    "$(echo "${line}" | awk '{split($0, line_parts," "); print line_parts[1]}')" \
+                    "+%B %-d, %Y")" \
+                "$(echo "${line}" | awk \
+                    '{n=split($0, line_parts," "); for (i = 2; i <= n; i++) print line_parts[i]}')" \
+                >> "$index_md"
+        fi
     done < "$sorted_pages"
 
     pandoc "$index_md" > "$bodies_dir"/index.html
@@ -71,6 +79,11 @@ build() (
 
     for f in "$unsubstituted_html_dir"/* ; do
         source pages/$f:t:r.metadata
+
+        # Make pretty dates available
+        metadata[pretty_created]=$(date -d "${metadata[created]}" "+%B %-d, %Y")
+        metadata[pretty_updated]=$(date -d "${metadata[updated]}" "+%B %-d, %Y")
+
         for key val in ${(kv)metadata}; do
 
             # anything in the text that has the ␚ symbol followed by a metadata key will be substituted

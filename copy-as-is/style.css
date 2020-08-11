@@ -74,3 +74,8 @@ p {
 #home-image{
     width:1.5em;
 }
+
+#created {
+    font-size: .8em;
+    margin: 0 0 0 auto;
+}
