@@ -9,26 +9,21 @@ rm -rf build/tmp
 
 build() (
 
-    local bodies_dir=build/tmp/html-bodies
-    mkdir -p "$bodies_dir"
+    local markdown_dir=build/tmp/markdown
+    mkdir -p "$markdown_dir"
 
-    # create html bodies
-    for f in pages/**/*(.); do
-        if [[ $f:t:e == "md" ]]; then
-            pandoc $f > "$bodies_dir"/$f:t:r.html
-        fi
-    done
+    # Copy markdown to staging area
+    rsync -a pages/ "$markdown_dir"
 
     #
-    # Begin index page generation
+    # Ammend index page body
     #
 
     # create index html body
     local index_dir=build/tmp/index
     mkdir -p "$index_dir"
 
-    local index_md="$index_dir"/index.md
-    cp special-pages/index/index.md "$index_md"
+    local index_md="$markdown_dir"/index.md
     local pages_list="$index_dir"/pages.txt
     echo "" > "$pages_list"
     for f in pages/**/*(.); do
@@ -58,11 +53,19 @@ build() (
         fi
     done < "$sorted_pages"
 
-    pandoc "$index_md" > "$bodies_dir"/index.html
+    #
+    # End index page amendment
+    #
 
-    #
-    # End index page generation
-    #
+    local bodies_dir=build/tmp/html-bodies
+    mkdir -p "$bodies_dir"
+
+    # create html bodies
+    for f in "$markdown_dir"/*(.); do
+        if [[ $f:t:e == "md" ]]; then
+            pandoc $f > "$bodies_dir"/$f:t:r.html
+        fi
+    done
 
     local unsubstituted_html_dir=build/tmp/unsubstituted-html
     mkdir -p "$unsubstituted_html_dir"
