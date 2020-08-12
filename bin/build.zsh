@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+if [[ $1 == "--prod" ]]; then
+    rm -rf build
+fi
+
 # This is a map that is imported for pages.
 typeset -A metadata
 
@@ -31,7 +35,14 @@ build() (
         # for every page on the site except this page, add a line to the pages list
         if [[ $f:t:e == "metadata" && $f:t != "index.metadata" ]]; then
             source $f
-            echo ${metadata[created]} \[${metadata[title]}\]\(${metadata[url]}\) >> "$pages_list"
+            if [[ $1 == "--prod" ]]; then
+                local url=${metadata[url]}
+            else
+                # browser-sync doesn't support no extention
+                local url=${metadata[url]}.html
+            fi
+
+            echo ${metadata[created]} \[${metadata[title]}\]\($url\) >> "$pages_list"
         fi
     done
 
@@ -98,19 +109,30 @@ build() (
 
     for f in "$unsubstituted_html_dir"/* ; do
         source pages/$f:t:r.metadata
-        cp $f "$site_dir"/${metadata[url]}
+        if [[ $1 == "--prod" || ${metadata[url]} == "index.html" ]]; then
+            local url=${metadata[url]}
+        else
+            # browser-sync doesn't support no extention
+            local url=${metadata[url]}.html
+        fi
+
+        cp $f "$site_dir"/$url
     done
 
     rsync -a copy-as-is/ "$site_dir"
+
+    sed 's/␚title/404/g' resources/html-prefix.html > "$site_dir"/404.html
+    cat resources/404-body.html resources/html-suffix.html >> "$site_dir"/404.html
 )
 
-build
+echo "Building..."
+build $@
 echo "Done."
 
 if [[ $1 == "--server" ]]; then
     echo "Will listen for changes..."
     (browser-sync start --server $site_dir --files $site_dir --no-notify --no-open)&
     fswatch -r --exclude bin --exclude build -m poll_monitor -0 . | while read -d "" event ; do
-        build
+        build $@
     done
 fi
