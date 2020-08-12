@@ -83,12 +83,19 @@ build() (
 
     # create html
     for f in "$bodies_dir"/* ; do
-        local suffix=resources/html-suffix.html
+        local home_div=resources/home-button-div.html
         if [[ $f:t == "index.html" ]] ; then
-            suffix=resources/html-suffix-no-home-button.html
+            home_div=resources/empty-div.html
         fi
 
-        cat resources/html-prefix.html $f "$suffix" > "$unsubstituted_html_dir"/$f:t
+        cat resources/prefix.html \
+            "$home_div" \
+            resources/open-content-div.html \
+            $f \
+            resources/close-div.html \
+            "$home_div" \
+            resources/suffix.html > "$unsubstituted_html_dir"/$f:t
+
     done
 
     for f in "$unsubstituted_html_dir"/* ; do
@@ -121,8 +128,13 @@ build() (
 
     rsync -a copy-as-is/ "$site_dir"
 
-    sed 's/␚title/404/g' resources/html-prefix.html > "$site_dir"/404.html
-    cat resources/404-body.html resources/html-suffix.html >> "$site_dir"/404.html
+    sed 's/␚title/404/g' resources/prefix.html > "$site_dir"/404.html
+    cat resources/home-button-div.html \
+        resources/open-content-div.html \
+        resources/404-body.html \
+        resources/close-div.html \
+        resources/empty-div.html \
+        resources/suffix.html >> "$site_dir"/404.html
 )
 
 echo "Building..."
