@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+metadata[title]="Garmin Cycling Computers are Garbage, Part One: Hillcrest Routes"
+metadata[url]="hillcrest-routes"
+metadata[created]="2020-08-12"
+metadata[updated]="2020-08-12"
