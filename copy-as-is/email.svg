@@ -1,1 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 300 300" width="300px" height="300px">
+  <style>
+    svg {
+      /* Literals. */
+      --w: 300px; /* If this is changed, also change the other places it shows up in. */
+      --h: var(--w); /* Square. */
+      --mail-w-fr: .8; /* Mail width as fraction of total width. */
+      --mail-h-fr: .55; /* Mail height as fraction of total heigth. */
+      --mail-tip-fr: .6; /* Mail tip distance from top of mail as fraction of mail height. */
+      --mail-tip-width-fr: .11; /* Thickness of folded tip as fraction of mail height. */
+
+      /* Derivations */
+      --mail-w: calc(var(--w) * var(--mail-w-fr)); /* Absolute mail width. */
+      --mail-h: calc(var(--h) * var(--mail-h-fr));  /* Absolute mail height. */
+      --margin-vert: calc((var(--h) - var(--mail-h)) / 2); /* Vertical distance from edge to mail. */
+      --margin-horiz: calc((var(--w) - var(--mail-w)) / 2); /* Horizontal distance form edge to mail. */
+    }
+
+  </style>
+
+  <!-- Top and bottom bars. -->
+  <rect style="x: 0; y: 0; width: var(--w); height: var(--margin-vert)" />
+  <rect style="x: 0; y: calc(var(--h) - var(--margin-vert)); width: var(--w); height: var(--margin-vert)" />
+
+  <!-- Side bars. -->
+  <rect style="x: 0; y: 0; width: var(--margin-horiz); height: var(--h)" />
+  <rect style="x: calc(var(--w) - var(--margin-horiz)); y: 0; width: var(--margin-horiz); height: var(--h)" />
+
+  <!-- Mail folded tip. -->
+  <path d="M 0 0 L 300 0 L 300 300 L 0 300 L 0 0" style="clip-path: polygon(var(--margin-horiz) var(--margin-vert), 50% calc(var(--margin-vert) + (var(--mail-h) * var(--mail-tip-fr)) - (var(--mail-h) * var(--mail-tip-width-fr))), calc(var(--margin-horiz) + var(--mail-w)) var(--margin-vert), calc(var(--margin-horiz) + var(--mail-w)) calc(var(--margin-vert) + (var(--mail-h) * var(--mail-tip-width-fr))), 50% calc(var(--margin-vert) + (var(--mail-h) * var(--mail-tip-fr))), var(--margin-horiz) calc(var(--margin-vert) + (var(--mail-h) * var(--mail-tip-width-fr))));" />
+</svg>
