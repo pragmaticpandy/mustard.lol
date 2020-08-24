@@ -1,11 +1,9 @@
-/**
- * 1. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
 html {
     height: 100%;
     font-family: sans-serif;
     font-size: 1em;
+
+    /* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
     -ms-text-size-adjust: 100%; /* 1 */
     -webkit-text-size-adjust: 100%; /* 1 */
 
@@ -16,6 +14,8 @@ html {
     background-color: var(--bg-color);
     --fg-color: #a89984;
     color: var(--fg-color);
+
+    --card-vertical-margin: 3em;
 }
 
 body {
@@ -66,8 +66,26 @@ hr {
 
 #content {
     display: grid;
-    max-width: 60ch;
+    max-width: 65ch;
     justify-items: stretch;
+    padding: 0 .5em 0 .5em;
+}
+
+.card {
+    border: 1px solid var(--fg-color);
+    border-radius: 1em;
+
+    --card-side-padding: 1.3em;
+    padding: 0 var(--card-side-padding) 0 var(--card-side-padding);
+
+    margin: var(--card-vertical-margin) 0 var(--card-vertical-margin) 0;
+}
+
+.card-container {
+
+    /* Removes excessive top and bottom margins around a set of cards. */
+    --card-container-vertical-margin: calc(-.75 * var(--card-vertical-margin));
+    margin: var(--card-container-vertical-margin) 0 var(--card-container-vertical-margin) 0;
 }
 
 /*
@@ -83,7 +101,7 @@ hr {
 
     width: 1.5em;
 
-    /* Easier on thumbs fro these links. */
+    /* Easier on thumbs for tapping links. */
     padding: .5em;
 }
 

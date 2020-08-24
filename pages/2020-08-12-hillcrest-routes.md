@@ -27,35 +27,63 @@ devices, minimizing the interactions with the Garmin, which by the way, is garba
 
 The routes, shortest first:
 
-10.8 miles, +593 feet: [HC11E-WP Arboretum–Lake W Blvd](https://ridewithgps.com/routes/33116423).
-Map:
+<div class="card-container">
+
+<div class="card">
+
+[HC11E-WP Arboretum–Lake W Blvd](https://ridewithgps.com/routes/33116423)
+
+10.8 miles, +593 feet
 
 <img class="route-img" src="/HC11E-WP-Arboretum-Lake-W-Blvd.png" alt="HC11E-WP Arboretum–Lake W Blvd">
 
----
+</div>
 
-11.2 miles, +700 feet: [HC-11m N-Cowen/Ravena Park](https://ridewithgps.com/routes/33142015).
-Map:
+<div class="card">
+
+[HC11N-Ravena Park](https://ridewithgps.com/routes/33142015)
+
+11.2 miles, +700 feet
 
 <img class="route-img" src="/HC-11m-N-Cowen-Ravena-Park.png" alt="HC-11m N-Cowen/Ravena Park">
 
----
+</div>
 
-12.8 miles, +799 feet: [HC12S-Downtown–Genesee](https://ridewithgps.com/routes/32966554). Map:
+<div class="card">
+
+[HC12S-Downtown–Genesee](https://ridewithgps.com/routes/32966554)
+
+12.8 miles, +799 feet
 
 <img class="route-img" src="/HC12S-Downtown-Genesee.png" alt="HC12S-Downtown–Genesee">
 
----
+</div>
 
-15.2 miles, +692 feet: [HC15S-18 Ave–W Seattle](https://ridewithgps.com/routes/33277866). Map:
+<div class="card">
+
+[HC15S-18 Ave–W Seattle](https://ridewithgps.com/routes/33277866)
+
+15.2 miles, +692 feet
 
 <img class="route-img" src="/HC15S-18-Ave-W-Seattle.png" alt="HC15S-18 Ave–W Seattle">
 
----
+</div>
 
-48.2 miles, +1869 feet: [HC48N-Lynnwood-Bothell](https://ridewithgps.com/routes/33862500). This
-route is probably my favorite in the 40-50 mile range. The first half is long false flats trending
-uphill along neighborhood boulevards and bike paths following the highway. Then you're rewarded with
-two smooth suburban descents, wooded paths, and a couple mountain glimpses. Map:
+<div class="card">
+
+[HC48N-Lynnwood-Bothell](https://ridewithgps.com/routes/33862500)
+
+48.2 miles, +1869 feet
+
+This route is probably my favorite in the 40-50 mile range. After the Fremont Ave N climb, there are
+over 15 miles on mostly flat neighborhood boulevards and bike paths following the highway.  Then
+you're finally rewarded for that initial climb with smoothly paved suburban descents, wooded paths,
+and mountain glimpses. From Bothell it follows the Burke-Gilman. At mile 29 there are Starbucks,
+Potbelly, froyo and sushi joints. On 2020-08-22 there was a porta-potty at mile 31.8, right after
+Blythe Park, which currently has its bathrooms locked for the pandemic.
 
 <img class="route-img" src="/HC48N-Lynnwood-Bothell.png" alt="HC48N-Lynnwood-Bothell">
+
+</div>
+
+</div>
