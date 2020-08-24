@@ -32,15 +32,30 @@ Map:
 
 <img class="route-img" src="/HC11E-WP-Arboretum-Lake-W-Blvd.png" alt="HC11E-WP Arboretum–Lake W Blvd">
 
+---
+
 11.2 miles, +700 feet: [HC-11m N-Cowen/Ravena Park](https://ridewithgps.com/routes/33142015).
 Map:
 
 <img class="route-img" src="/HC-11m-N-Cowen-Ravena-Park.png" alt="HC-11m N-Cowen/Ravena Park">
 
+---
+
 12.8 miles, +799 feet: [HC12S-Downtown–Genesee](https://ridewithgps.com/routes/32966554). Map:
 
 <img class="route-img" src="/HC12S-Downtown-Genesee.png" alt="HC12S-Downtown–Genesee">
 
+---
+
 15.2 miles, +692 feet: [HC15S-18 Ave–W Seattle](https://ridewithgps.com/routes/33277866). Map:
 
 <img class="route-img" src="/HC15S-18-Ave-W-Seattle.png" alt="HC15S-18 Ave–W Seattle">
+
+---
+
+48.2 miles, +1869 feet: [HC48N-Lynnwood-Bothell](https://ridewithgps.com/routes/33862500). This
+route is probably my favorite in the 40-50 mile range. The first half is long false flats trending
+uphill along neighborhood boulevards and bike paths following the highway. Then you're rewarded with
+two smooth suburban descents, wooded paths, and a couple mountain glimpses. Map:
+
+<img class="route-img" src="/HC48N-Lynnwood-Bothell.png" alt="HC48N-Lynnwood-Bothell">
