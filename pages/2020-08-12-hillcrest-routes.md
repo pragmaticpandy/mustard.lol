@@ -71,6 +71,18 @@ The routes, shortest first:
 
 <div class="card">
 
+[HC20S-Healthy Streets-Chief Sealth](https://ridewithgps.com/routes/32496875)
+
+20.1 miles, +1302 feet
+
+When not on Chief Sealth, this route is almost entirely on Stay Healthy Streets.
+
+<img class="route-img" src="/HC20S-Healthy-Streets-Chief-Sealth.png" alt="HC20S-Healthy-Streets-Chief-Sealth.png">
+
+</div>
+
+<div class="card">
+
 [HC48N-Lynnwood-Bothell](https://ridewithgps.com/routes/33862500)
 
 48.2 miles, +1869 feet
