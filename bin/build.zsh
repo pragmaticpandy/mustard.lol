@@ -83,17 +83,19 @@ build() (
 
     # create html
     for f in "$bodies_dir"/* ; do
-        local home_div=resources/home-button-div.html
+        local top_nav_div=resources/top-nav-div.html
+        local bottom_nav_div=resources/home-button-div.html
         if [[ $f:t == "index.html" ]] ; then
-            home_div=resources/empty-div.html
+            local top_nav_div=resources/theme-button-div.html
+            local bottom_nav_div=resources/empty-div.html
         fi
 
         cat resources/prefix.html \
-            "$home_div" \
+            "$top_nav_div" \
             resources/open-content-div.html \
             $f \
             resources/close-div.html \
-            "$home_div" \
+            "$bottom_nav_div" \
             resources/suffix.html > "$unsubstituted_html_dir"/$f:t
 
     done

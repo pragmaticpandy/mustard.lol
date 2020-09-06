@@ -18,23 +18,24 @@ html {
     --card-vertical-margin: 3em;
 }
 
+.light {
+    --bg-color: white;
+    --fg-color: #004717;
+}
+
 body {
     height: 98%;
     display: grid;
     place-items: center;
     margin: .5em;
 
-    /* home button, content, home button */
+    /* top nav, content, bottom nav */
     grid-template-rows: auto 1fr auto;
 }
 
 a {
     text-decoration-color: var(--fg-color);
     color: var(--fg-color);
-}
-
-a.social {
-    text-decoration: none;
 }
 
 h1 {
@@ -53,15 +54,41 @@ img {
 }
 
 img:not(.fg-svg) {
-    border: 1px solid var(--fg-color);
+    border: 0.05em solid var(--fg-color);
 }
 
 hr {
     border: 0;
     width: 100%;
-    height: 1px;
+    height: 0.05em;
     background: var(--fg-color);
     opacity: .5;
+}
+
+a.svg-button {
+    text-decoration: none;
+
+    /*
+     * Prevent the link you are tapping on chrome from turning blue.
+     */
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+svg.svg-button {
+    --svg-button-size: 1.5em;
+    width: var(--svg-button-size);
+    height: var(--svg-button-size);
+
+    /* Easier on thumbs for tapping links. */
+    padding: .5em;
+
+    fill: var(--fg-color);
 }
 
 #content {
@@ -72,7 +99,7 @@ hr {
 }
 
 .card {
-    border: 1px solid var(--fg-color);
+    border: 0.05em solid var(--fg-color);
     border-radius: 1em;
 
     --card-side-padding: 1.3em;
@@ -88,37 +115,31 @@ hr {
     margin: var(--card-container-vertical-margin) 0 var(--card-container-vertical-margin) 0;
 }
 
-/*
- * SVGs that should be foreground-colored. They all also happen to be links.
- */
-.fg-svg {
-
-    /*
-     * This gets all the svgs to the right color for the --fg-color: #a89984
-     * Used https://codepen.io/sosuke/pen/Pjoqqp to convert hex to a filter.
-     */
-    filter: invert(70%) sepia(27%) saturate(244%) hue-rotate(355deg) brightness(84%) contrast(84%);
-
-    width: 1.5em;
-
-    /* Easier on thumbs for tapping links. */
-    padding: .5em;
-}
-
-
 #profile-pic-div {
+    border: 0.05em solid var(--fg-color);
     margin: auto;
+    --prof-pic-max-width: 12em;
+    max-width: var(--prof-pic-max-width);
 }
 
 #profile-pic {
-    max-width: 150px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: block;
 }
 
-#social-div {
+#social-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+#social-buttons-div {
     margin: 0 0 0 auto;
 }
 
-.home-link {
+.top-nav {
     margin: 0 0 0 auto;
 }
 
@@ -135,7 +156,7 @@ hr {
 /* total width */
 body::-webkit-scrollbar {
     background-color: var(--bg-color);
-    width:16px
+    width:1em;
 }
 
 /* background of the scrollbar except button or resizer */
@@ -146,8 +167,8 @@ body::-webkit-scrollbar-track {
 /* scrollbar itself */
 body::-webkit-scrollbar-thumb {
     background-color: var(--fg-color);
-    border-radius:16px;
-    border:4px solid var(--bg-color);
+    border-radius:1em;
+    border:0.25em solid var(--bg-color);
 }
 
 /* set button(top and bottom of the scrollbar) */
@@ -156,3 +177,42 @@ body::-webkit-scrollbar-button {display:none}
 /*
  * Done setting scrollbar stuff.
  */
+
+#email-svg path {
+	--mail-w: 70%;
+	--mail-h: 45%;
+	--mail-tip-y: .6; /* Mail tip distance from top of mail as fraction of mail height. */
+	--mail-tip-width: .15; /* Thickness of folded tip as fraction of mail height. */
+
+	--mail-top-y: calc((100% - var(--mail-h)) / 2);
+	--mail-bottom-y: calc(100% - var(--mail-top-y));
+	--mail-left-x: calc((100% - var(--mail-w)) / 2);
+	--mail-right-x: calc(100% - var(--mail-left-x));
+
+	--fold-width: var(--mail-h) * var(--mail-tip-width);
+	--fold-bottom-y:
+	  calc(var(--mail-top-y) + (var(--mail-tip-y) * var(--mail-h)));
+	--fold-top-y: calc(var(--fold-bottom-y) - var(--fold-width));
+
+	--fold-outer-y: calc(var(--mail-top-y) + var(--fold-width));
+
+	clip-path: polygon(
+		0% 0%,
+		var(--mail-left-x) var(--mail-top-y),
+		50% var(--fold-top-y),
+		50% var(--fold-bottom-y),
+		var(--mail-left-x) var(--fold-outer-y),
+		var(--mail-left-x) var(--mail-bottom-y),
+		var(--mail-right-x) var(--mail-bottom-y),
+		var(--mail-right-x) var(--fold-outer-y),
+		50% var(--fold-bottom-y),
+		50% var(--fold-top-y),
+		var(--mail-right-x) var(--mail-top-y),
+		var(--mail-left-x) var(--mail-top-y),
+		0% 0%,
+		100% 0%,
+		100% 100%,
+		0% 100%,
+		0% 0%);
+}
+
