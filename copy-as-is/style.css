@@ -65,6 +65,39 @@ hr {
     opacity: .5;
 }
 
+#about-me-svg-div {
+    display: grid;
+    place-items: center;
+
+    /* that em in there is using dummy divs to create a padding effect */
+    grid-template-columns: repeat(6, minmax(0, 1fr) 0.2em) minmax(0, 1fr);
+}
+
+svg.about-me {
+    --about-me-size: 4em;
+    width: var(--about-me-size);
+    height: var(--about-me-size);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Some of these are big compared to the others. So we use padding to get them smaller. */
+#about-me-oh {
+    padding: 8%;
+}
+
+#about-me-cpu {
+    padding: 10%;
+}
+
+#about-me-martini {
+    padding: 11%;
+}
+
+#about-me-soccer {
+    padding: 10%;
+}
+
 a.svg-button {
     text-decoration: none;
 
