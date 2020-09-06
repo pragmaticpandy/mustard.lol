@@ -15,11 +15,15 @@
     </script>
 
     <script>
+        function getSystemThemePreference() {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
         function toggleDarkMode() {
             localStorage
                 .setItem(
                     'mode',
-                    (localStorage.getItem('mode') || 'dark') === 'dark'
+                    (localStorage.getItem('mode') || getSystemThemePreference()) === 'dark'
                         ? 'light' : 'dark');
 
             localStorage
@@ -32,7 +36,7 @@
             .addEventListener(
                 'DOMContentLoaded',
                 (event) => {
-                    ((localStorage.getItem('mode') || 'dark') === 'light')
+                    ((localStorage.getItem('mode') || getSystemThemePreference()) === 'light')
                         ? document.querySelector('html').classList.add('light')
                         : document.querySelector('html').classList.remove('light')
                 })
