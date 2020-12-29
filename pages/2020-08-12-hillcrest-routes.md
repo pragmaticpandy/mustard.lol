@@ -71,6 +71,16 @@ The routes, shortest first:
 
 <div class="card">
 
+[HC19W-Locks-Magnolia-Elliot Bay](https://ridewithgps.com/routes/34919520)
+
+18.8 miles, +959 feet
+
+<img class="route-img" src="/HC19W-locks-magnolia-elliot-bay.png" alt="HC19W-Locks-Magnolia-Elliot Bay">
+
+</div>
+
+<div class="card">
+
 [HC20S-Healthy Streets-Chief Sealth](https://ridewithgps.com/routes/32496875)
 
 20.1 miles, +1302 feet
