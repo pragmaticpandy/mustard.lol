@@ -1,7 +1,7 @@
 html {
     height: 100%;
     font-family: sans-serif;
-    font-size: 1em;
+    font-size: 1.05em;
 
     /* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
     -ms-text-size-adjust: 100%; /* 1 */
@@ -10,17 +10,22 @@ html {
     /* Dark navy. Maybe some day
     --bg-color: #1b1a2e; */
 
-    --bg-color: black;
+    --bg-color: #042a34;
+    --fg-color: hsl(48, 20%, 73%);
+    font-weight: 300;
+
     background-color: var(--bg-color);
-    --fg-color: #a89984;
     color: var(--fg-color);
 
     --card-vertical-margin: 3em;
+
+    --max-width: 65ch;
 }
 
 .light {
     --bg-color: white;
     --fg-color: #004717;
+    font-weight: 400;
 }
 
 body {
@@ -40,6 +45,10 @@ a {
 
 h1 {
     font-size: 1.7em;
+}
+
+h1, h2 {
+    font-weight: normal;
 }
 
 p {
@@ -126,9 +135,24 @@ svg.svg-button {
 
 #content {
     display: grid;
-    max-width: 65ch;
-    justify-items: stretch;
     padding: 0 .5em 0 .5em;
+    justify-items: center;
+}
+
+#content h1 {
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+
+#created {
+    font-size: .9em;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+
+#content-text {
+    max-width: var(--max-width);
+    padding-top: 2em;
 }
 
 .card {
@@ -144,7 +168,7 @@ svg.svg-button {
 .card-container {
 
     /* Removes excessive top and bottom margins around a set of cards. */
-    --card-container-vertical-margin: calc(-.75 * var(--card-vertical-margin));
+    --card-container-vertical-margin: calc(-.5 * var(--card-vertical-margin));
     margin: var(--card-container-vertical-margin) 0 var(--card-container-vertical-margin) 0;
 }
 
@@ -176,10 +200,6 @@ svg.svg-button {
     margin: 0 0 0 auto;
 }
 
-#created {
-    font-size: .9em;
-    margin: 0 0 0 auto;
-}
 
 /*
  * Set scrollbar colors in MacOS. Not testing in other OSes.

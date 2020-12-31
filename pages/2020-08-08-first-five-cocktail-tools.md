@@ -2,6 +2,8 @@
 
 <div id="created">*␚pretty_created. Last updated ␚pretty_updated*.</div>
 
+<div id="content-text">
+
 I love giving my friends and family cocktail tools and ingredients as gifts. I have done this so
 many times that
 by now I'm sure I'm the butt of a running joke between them. What can I say. I love making and
@@ -56,3 +58,5 @@ Without further ado, items one through five:
   durable, is cheap at the time of this post, and has a cool pattern that increases grip.
 
 Cheers 🥃
+
+</div>

@@ -2,6 +2,8 @@
 
 <div id="created">*␚pretty_created. Last updated ␚pretty_updated*.</div>
 
+<div id="content-text">
+
 I use a Garmin cycling computer, the Edge 1030, and henceforth "the Garmin". It is garbage. This post
 is "Part One" because, even
 though I have no additional specific content in mind, this shit is so garbage that I'm 100%
@@ -105,6 +107,8 @@ Potbelly, froyo and sushi joints. On 2020-08-22 there was a porta-potty at mile 
 Blythe Park, which currently has its bathrooms locked for the pandemic.
 
 <img class="route-img" src="/HC48N-Lynnwood-Bothell.png" alt="HC48N-Lynnwood-Bothell">
+
+</div>
 
 </div>
 

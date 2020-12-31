@@ -322,4 +322,8 @@ Henlo. You have reached my website. I will post things occasionally, maybe.
 </div>
 </div>
 
+<div id="content-text">
+
 All that can be found here:
+
+<!-- The rest completed by the build script -->

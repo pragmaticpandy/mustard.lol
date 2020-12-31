@@ -64,6 +64,9 @@ build() (
         fi
     done < "$sorted_pages"
 
+    # close the content-text div
+    printf "</div>\n" >> "$index_md"
+
     #
     # End index page amendment
     #
