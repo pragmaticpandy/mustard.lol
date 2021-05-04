@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+metadata[title]="Hamza"
+metadata[url]="hamza"
+metadata[created]="2021-05-03"
+metadata[updated]="2021-05-03"

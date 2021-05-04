@@ -113,7 +113,7 @@ build() (
         for key val in ${(kv)metadata}; do
 
             # anything in the text that has the ␚ symbol followed by a metadata key will be substituted
-            sed -i '.sed-backup' "s/␚$key/$val/g" $f
+            /usr/bin/sed -i '.sed-backup' "s/␚$key/$val/g" $f
         done
     done
 
@@ -133,7 +133,7 @@ build() (
 
     rsync -a copy-as-is/ "$site_dir"
 
-    sed 's/␚title/404/g' resources/prefix.html > "$site_dir"/404.html
+    /usr/bin/sed 's/␚title/404/g' resources/prefix.html > "$site_dir"/404.html
     cat resources/home-button-div.html \
         resources/open-content-div.html \
         resources/404-body.html \
