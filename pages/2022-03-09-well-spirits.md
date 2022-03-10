@@ -12,7 +12,7 @@ That said, if you'd like some additional direction, what follows are the bottles
 often—I'd keep these in my speed rack, if I had one. There should be at least one of these at any
 liquor store.
 
-**Whiskey**: Buffalo Trace Bourbon, Rittenhouse 100 Proof Rye
+**Whiskey**: Johnny Drum Private Stock Bourbon, Buffalo Trace Bourbon, Rittenhouse 100 Proof Rye
 
 **Gin**: Plymouth, Tanqueray, Beefeater
 
