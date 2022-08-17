@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+metadata[title]="Surrealist Hamza"
+metadata[url]="surrealist-hamza"
+metadata[created]="2022-08-16"
+metadata[updated]="2022-08-16"
