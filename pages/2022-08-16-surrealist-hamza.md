@@ -10,7 +10,7 @@ DALL·E was instructed to to create each image in the style of a different famou
 guess which artists. Answers are at the bottom.
 
 In case you are unacquainted, let me introduce you to our cat, Hamza. Hamza has lots of fun hobbies.
-For example, he likes to—unannounced—jump from the floor to people's shoulders, scaring the crap
+For example, he likes to—unannounced—jump from the floor to a pair of shoulders, scaring the crap
 out of guests.
 
 <img src="/hamza-shoulders-pablo-picasso.png" alt="hamza-shoulders-pablo-picasso">
@@ -20,7 +20,7 @@ Hamza loves flies. Specifically, he loves catching and releasing them until they
 <img src="hamza-fly-frida-kahlo.png" alt="mza-fly-frida-kahlo">
 
 Hamza loves to pretend fight. His favorite way to pretend fight is by biting, with far too much
-force, his caretakers hands.
+force, his caretaker's hands.
 
 <img src="hamza-bites-joan-miro.png" alt="hamza-bites-joan-miro">
 
