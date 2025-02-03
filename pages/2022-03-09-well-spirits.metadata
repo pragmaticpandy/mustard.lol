@@ -1,7 +1,0 @@
-#!/usr/bin/env zsh
-
-metadata[title]="Well Spirits"
-metadata[url]="wells"
-metadata[created]="2022-03-09"
-metadata[updated]="2022-03-09"
-

@@ -1,6 +1,0 @@
-#!/usr/bin/env zsh
-
-metadata[title]="Cocktail Tools: One through Five"
-metadata[url]="cocktail-tools-1"
-metadata[created]="2020-08-08"
-metadata[updated]="2020-08-09"
